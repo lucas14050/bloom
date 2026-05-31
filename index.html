@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor & Cacau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <nav>
+        <a href="#logo">Início</a>
+        <a href="#flores">Flores</a>
+        <a href="#chocolate">Chocolates</a>
+        <a href="#promocoes">Promoções</a>
+        <a href="#login">👤 Login</a>
+        <a href="#carrinho">🛒 Carrinho</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <img src="./img/logo.png" alt="" class="logo-banner">
+
+    <p>Flores e Chocolates para Momentos Especiais</p>
+
+    </button>
+</section>
+
+<section class="produtos">
+    <h2>🌹 Flores</h2>
+
+    <div class="cards" id="flores">
+
+        <div class="card">
+            <img src="https://florasantaclara.com.br/wp-content/uploads/2021/07/PhotoRoom_20210811_111658.png" alt="Buquê de Rosas">
+            <h3>Buquê de Rosas</h3>
+            <p>R$ 89,90</p>
+            <button onclick="adicionarCarrinho('Buquê de Rosas',89.90)">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=500" alt="Tulipas">
+            <h3>Tulipa</h3>
+            <p>R$ 99,90</p>
+            <button onclick="adicionarCarrinho('Tulipas',99.90)">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500" alt="Girassóis">
+            <h3>Girassól</h3>
+            <p>R$ 79,90</p>
+            <button onclick="adicionarCarrinho('Girassóis',79.90)">
+                Adicionar
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="produtos" id="chocolate">
+    <h2>🍫 Chocolates</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=500" alt="Caixa Premium">
+            <h3>Caixa Premium</h3>
+            <p>R$ 69,90</p>
+            <button onclick="adicionarCarrinho('Caixa Premium',69.90)">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=500" alt="Trufas Gourmet">
+            <h3>Trufas Gourmet</h3>
+            <p>R$ 49,90</p>
+            <button onclick="adicionarCarrinho('Trufas Gourmet',49.90)">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500" alt="Morangos com Chocolate">
+            <h3>Morangos com Chocolate</h3>
+            <p>R$ 59,90</p>
+            <button onclick="adicionarCarrinho('Morangos com Chocolate',59.90)">
+                Adicionar
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="promocao" id="promocoes">
+    <h2>🔥 Promoção Especial</h2>
+    <p>20% OFF em todos os combos e frete grátis acima de R$150.</p>
+</section>
+
+<section id="carrinho">
+
+    <h2>🛒 Meu Carrinho</h2>
+
+    <div id="lista-carrinho"></div>
+
+    <h3>
+        Total: R$
+        <span id="total">0,00</span>
+    </h3>
+
+    <button onclick="window.location.href='checkout.html'">
+        Finalizar Compra
+    </button>
+
+</section>
+
+<section class="login" id="login">
+    <h2>👤 Login</h2>
+
+    <form>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 - Bloom Floricultura</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

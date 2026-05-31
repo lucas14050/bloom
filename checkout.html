@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finalizar Compra - Bloom Floricultura</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff5f7;
+}
+
+.container{
+    max-width:800px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    text-align:center;
+    color:#d6336c;
+    margin-bottom:30px;
+}
+
+.opcoes{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.opcoes button{
+    background:#d6336c;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.opcoes button:hover{
+    background:#b82a5b;
+}
+
+.formulario{
+    display:none;
+}
+
+.formulario.ativo{
+    display:block;
+}
+
+.formulario h2{
+    color:#d6336c;
+    margin-bottom:15px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.info{
+    background:#fff0f5;
+    border-left:5px solid #d6336c;
+    padding:15px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.finalizar{
+    width:100%;
+    background:#d6336c;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:10px;
+}
+
+.finalizar:hover{
+    background:#b82a5b;
+}
+
+.voltar{
+    display:block;
+    text-align:center;
+    margin-top:25px;
+    color:#d6336c;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>🌹 Finalizar Compra 🍫</h1>
+
+<div class="opcoes">
+
+<button onclick="mostrarFormulario('pix')">
+PIX
+</button>
+
+<button onclick="mostrarFormulario('boleto')">
+Boleto
+</button>
+
+<button onclick="mostrarFormulario('cartao')">
+Cartão de Crédito
+</button>
+
+</div>
+
+<!-- PIX -->
+
+<div id="pix" class="formulario">
+
+<h2>Pagamento via PIX</h2>
+
+<input type="text" placeholder="Nome Completo">
+
+<input type="email" placeholder="E-mail">
+
+<div class="info">
+Após confirmar o pedido, uma chave PIX será exibida para pagamento.
+</div>
+
+<button class="finalizar">
+Gerar PIX
+</button>
+
+</div>
+
+<!-- BOLETO -->
+
+<div id="boleto" class="formulario">
+
+<h2>Pagamento via Boleto</h2>
+
+<input type="text" placeholder="Nome Completo">
+
+<input type="text" placeholder="CPF">
+
+<input type="text" placeholder="Endereço">
+
+<input type="text" placeholder="CEP">
+
+<button class="finalizar">
+Gerar Boleto
+</button>
+
+</div>
+
+<!-- CARTÃO -->
+
+<div id="cartao" class="formulario">
+
+<h2>Pagamento via Cartão</h2>
+
+<input type="text" placeholder="Nome no Cartão">
+
+<input type="text" placeholder="Número do Cartão">
+
+<input type="text" placeholder="Validade MM/AA">
+
+<input type="text" placeholder="CVV">
+
+<button class="finalizar">
+Pagar Agora
+</button>
+
+</div>
+
+<a href="index.html" class="voltar">
+← Voltar para a loja
+</a>
+
+</div>
+
+<script>
+
+function mostrarFormulario(tipo){
+
+    const formularios =
+    document.querySelectorAll(".formulario");
+
+    formularios.forEach(formulario=>{
+        formulario.classList.remove("ativo");
+    });
+
+    document
+    .getElementById(tipo)
+    .classList.add("ativo");
+}
+
+</script>
+
+</body>
+</html>
